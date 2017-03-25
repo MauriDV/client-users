@@ -3,10 +3,10 @@ import React from 'react';
 export default class Session extends React.Component{
   constructor(props){
     super(props);
-    this.state = {usuario:{}}
+    this.state = {usuario:[]}
   }
   componentWillMount(){
-    fetch('//localhost:3000/api/users/session')
+    fetch('//localhost:3000/api/users/')
       .then(function(response){
         return response.json()
       })
@@ -17,9 +17,9 @@ export default class Session extends React.Component{
 
   render(){
     console.log(this.state.usuario);
-    if(this.state.usuario == {}){
+    if(this.state.usuario > 0){
       return(
-        <div>te has logeado como {this.state.usuario.username}</div>
+        <div>te has logeado como {this.state.usuario[0].username}</div>
       )
     }else{
       return(
