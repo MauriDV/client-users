@@ -6,7 +6,7 @@ export default class Session extends React.Component{
     this.state = {usuario:[]}
   }
   componentWillMount(){
-    fetch('//localhost:3000/api/users/')
+    fetch('http://localhost:3000/api/users/')
       .then(function(response){
         return response.json()
       })
