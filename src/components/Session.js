@@ -17,7 +17,7 @@ export default class Session extends React.Component{
 
   render(){
     console.log(this.state.usuario);
-    if(this.state.usuario != null){
+    if(this.state.usuario == {}){
       return(
         <div>te has logeado como {this.state.usuario.username}</div>
       )
